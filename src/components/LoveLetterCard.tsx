@@ -38,7 +38,7 @@ export function LoveLetterCard({ children }: { children: React.ReactNode }) {
           </motion.div>
         ))}
       </div>
-      <div className="relative font-script text-3xl text-text leading-loose">
+      <div className="relative font-sans text-lg text-text leading-relaxed">
         {children}
       </div>
     </div>
