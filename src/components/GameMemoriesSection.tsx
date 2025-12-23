@@ -1,7 +1,7 @@
 const memories = [
   {
     title: 'Among Us',
-    text: 'Among Us nights — chaos, laughter, trust issues, and emergency meetings that never solved anything.',
+    text: 'Among Us nights  chaos, laughter, trust issues, and emergency meetings that never solved anything.',
   },
   {
     title: 'Roblox: Grow a Garden',
@@ -38,7 +38,7 @@ export function GameMemoriesSection() {
       </div>
 
       <p className="text-center text-text/60 text-lg mt-12 italic">
-        These weren't just games — they were moments I'll always be grateful
+        These weren't just games they were moments I'll always be grateful
         for.
       </p>
     </div>
