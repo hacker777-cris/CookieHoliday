@@ -2,16 +2,16 @@ import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 
 export function LoveLetterCard({ children }: { children: React.ReactNode }) {
-  const hearts = Array.from({ length: 10 });
+  const hearts = Array.from({ length: 20 });
 
   const heartVariants = {
     initial: { y: 0, opacity: 0 },
     animate: (i: number) => ({
-      y: -200,
+      y: -300,
       opacity: [0, 1, 0],
       transition: {
-        delay: i * 0.5,
-        duration: 3,
+        delay: i * 0.2,
+        duration: 4,
         repeat: Infinity,
         ease: 'easeInOut',
       },
@@ -19,16 +19,16 @@ export function LoveLetterCard({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <div className="relative bg-white/80 p-8 rounded-lg shadow-lg">
-      <div className="absolute -top-4 -left-4 w-12 h-12 bg-accent rounded-full flex items-center justify-center">
-        <Heart className="w-8 h-8 text-white" fill="white" />
+    <div className="relative bg-primary-light p-8 rounded-lg shadow-lg border-2 border-primary">
+      <div className="absolute -top-6 -left-6 w-16 h-16 bg-primary rounded-full flex items-center justify-center transform -rotate-12">
+        <Heart className="w-10 h-10 text-white" fill="white" />
       </div>
       <div className="absolute inset-0 overflow-hidden">
         {hearts.map((_, i) => (
           <motion.div
             key={i}
             className="absolute bottom-0"
-            style={{ left: `${(i + 1) * 9}%` }}
+            style={{ left: `${(i + 1) * 5}%` }}
             variants={heartVariants}
             initial="initial"
             animate="animate"
@@ -38,7 +38,7 @@ export function LoveLetterCard({ children }: { children: React.ReactNode }) {
           </motion.div>
         ))}
       </div>
-      <div className="relative font-script text-2xl text-text/80 leading-loose">
+      <div className="relative font-script text-3xl text-text leading-loose">
         {children}
       </div>
     </div>
