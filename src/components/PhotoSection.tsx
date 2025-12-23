@@ -5,12 +5,16 @@ import photo1 from '../assets/IMG-20251207-WA0011.jpg';
 import photo2 from '../assets/IMG-20251218-WA0010.jpg';
 import photo3 from '../assets/IMG-20251219-WA0005.jpg';
 import video1 from '../assets/VID_20251115_065621_126.mp4';
+import video2 from '../assets/Screenrecorder-2025-12-23-14-22-24-910.mp4';
+import video3 from '../assets/Screenrecorder-2025-12-23-14-22-57-645.mp4';
 
 const media = [
   { type: 'image', src: photo1 },
   { type: 'video', src: video1 },
   { type: 'image', src: photo2 },
   { type: 'image', src: photo3 },
+  { type: 'video', src: video2 },
+  { type: 'video', src: video3 },
 ];
 
 export function PhotoSection() {
