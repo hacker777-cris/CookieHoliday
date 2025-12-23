@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="bg-background text-text overflow-x-hidden">
       <div className="relative max-w-4xl mx-auto px-4">
-        <div className="absolute top-0 left-6 md:left-1/2 -translate-x-1/2 h-full w-3 bg-gradient-to-b from-accent via-secondary to-primary"></div>
+        <div className="absolute top-0 left-6 md:left-1/2 -translate-x-1/2 h-full w-1 bg-text/20"></div>
         {sections.map(({ id, component, color }) => (
           <motion.div
             key={id}
@@ -34,13 +34,13 @@ function App() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <div className="absolute top-1/2 -translate-y-1/2 left-6 md:left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-background border-8 border-accent"></div>
+            <div className="absolute top-1/2 -translate-y-1/2 left-6 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-background border-4 border-text/20"></div>
             <div
               className={`w-full md:w-1/2 px-8 ${
                 id % 2 === 0
                   ? 'md:ml-auto md:text-left'
                   : 'md:mr-auto md:text-right'
-              } text-left pl-24 md:pl-8`}
+              } text-left pl-20 md:pl-8`}
             >
               {component}
             </div>
